@@ -1,1 +1,1 @@
-web: python webhook_handler.py
+web: gunicorn webhook_handler:webhook_handler --log-file -
