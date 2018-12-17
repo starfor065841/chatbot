@@ -15,3 +15,7 @@ def setup_webhook():
         return challenge
 
 run(host="localhost", port=5000, debug=True)
+
+run(host="localhost", port=5000, debug=True)
+
+#run(host="localhost", port=5000, debug=True)
