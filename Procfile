@@ -1,1 +1,1 @@
-web: gunicorn webhook_handler:webhook_handler --log-file -
+web: gunicorn webhook_handler.wsgi
