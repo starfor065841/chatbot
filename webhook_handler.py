@@ -88,7 +88,7 @@ machine = TocMachine(
 #end fsm
 
 #We will receive messages that Facebook sends our bot at this endpoint 
-@webhook_handler.route("/webhook", methods=['GET', 'POST'])
+@webhook_handler.route("/", methods=['GET', 'POST'])
 def receive_message():
     if request.method == 'GET':
         """Before allowing people to message your bot, Facebook has implemented a verify token
@@ -149,9 +149,7 @@ def verify_fb_token(token_sent, mode):
 def favicon():
     return send_from_directory(os.path.join(webhook_handler.root_path, 'static'), 'favicon.ico', mimetype='image/vnd.microsoft.icon')
 
-@webhook_handler.route('/')
-def favicon2():
-    return send_from_directory(os.path.join(webhook_handler.root_path, 'static'), '/', mimetype='image/vnd.microsoft.icon')
+
 
 '''
 @webhook_handler.route('/show-fsm', methods=['GET'])
