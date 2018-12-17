@@ -1,6 +1,6 @@
 #Python libraries that we need to import for our bot
 import random
-from flask import Flask, request
+from flask import Flask, request, send_from_directory
 from bottle import static_file
 from fsm import TocMachine
 import os
@@ -9,6 +9,7 @@ from send_msg import send_message
 webhook_handler = Flask(__name__)
 ACCESS_TOKEN = 'EAAFHtRQRdEsBALpCb6If7X2tKwZAR4b10GtnDaye6XXII6LypemuznzgvxasD3fvSeZA6x0fJ0YDqMSSSgaCcH037hawprNUWlSKvtKv49SurV6vMweXvaoYE3Iyw1cOrktKmzFurSvZAxlux2MK1WNVIyqwruVNSWLCjA8bwZDZD'
 VERIFY_TOKEN = 'Rmp4951344'
+
 
 
 #initial fsm
@@ -143,6 +144,10 @@ def verify_fb_token(token_sent, mode):
     if token_sent == VERIFY_TOKEN and mode == "subscribe":
         return request.args.get("hub.challenge")
     return 'Invalid verification token'
+
+@webhook_handler.route('/favicon.ico')
+def favicon():
+    return send_from_directory(os.path.join(app.root_path, 'static/ico/favicon.ico'))
 
 '''
 @webhook_handler.route('/show-fsm', methods=['GET'])
