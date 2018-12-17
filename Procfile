@@ -1,1 +1,1 @@
-web: gunicorn webhook_handler.wsgi
+web: python webhook_handler.py
