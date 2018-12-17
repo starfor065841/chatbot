@@ -187,4 +187,4 @@ def send_vid(recipient_id, url):
 '''
 
 if __name__ == "__main__":
-    webhook_handler.run(host='0.0.0.0', port = 12345, debug=True)
+    webhook_handler.run(host='0.0.0.0', port = int(os.environ.get('PORT', 12345)), debug=True)
