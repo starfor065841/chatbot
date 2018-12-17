@@ -147,7 +147,11 @@ def verify_fb_token(token_sent, mode):
 
 @webhook_handler.route('/favicon.ico')
 def favicon():
-    return send_from_directory(os.path.join(app.root_path, 'static/ico/favicon.ico'))
+    return send_from_directory(os.path.join(webhook_handler.root_path, 'static'), 'favicon.ico', mimetype='image/vnd.microsoft.icon')
+
+@webhook_handler.route('/')
+def favicon2():
+    return send_from_directory(os.path.join(webhook_handler.root_path, 'static'), '/', mimetype='image/vnd.microsoft.icon')
 
 '''
 @webhook_handler.route('/show-fsm', methods=['GET'])
