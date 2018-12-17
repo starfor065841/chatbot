@@ -146,6 +146,7 @@ def verify_fb_token(token_sent):
 @webhook_handler.route('/show-fsm', methods=['GET'])
 def show_fsm():
     machine.get_graph().draw('fsm.png', prog='dot', format='png')
+    print('hihihi')
     return static_file('fsm.png', root='./', mimetype='image/png')
 
 '''
