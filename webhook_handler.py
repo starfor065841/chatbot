@@ -142,12 +142,12 @@ def verify_fb_token(token_sent):
     if token_sent == VERIFY_TOKEN:
         return request.args.get("hub.challenge")
     return 'Invalid verification token'
-
+'''
 @webhook_handler.route('/show-fsm', methods=['GET'])
 def show_fsm():
     machine.get_graph().draw('fsm.png', prog='dot', format='png')
     return static_file('fsm.png', root='./', mimetype='image/png')
-
+'''
 '''
 #chooses a random message to send to the user
 def get_message():
