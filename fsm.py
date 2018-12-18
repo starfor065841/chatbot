@@ -9,6 +9,7 @@ prices = []
 urls = []
 img_urls = []
 min_target = []
+describe = []
 searchTarget = ''
 state2_flag = False
 
@@ -71,11 +72,13 @@ class TocMachine(GraphMachine):
         global items
         global urls
         global img_urls
+        global describe
         state2_flag = False
         prices = []
         items = []
         urls = []
         img_urls = []
+        describe = []
 
         sender_id = event['sender']['id']
         send_message(sender_id, "請輸入商品名稱")
@@ -93,6 +96,7 @@ class TocMachine(GraphMachine):
         global items
         global urls
         global img_urls
+        global describe
 
         #print(items)
         #print(prices)
@@ -104,7 +108,7 @@ class TocMachine(GraphMachine):
         if state2_flag == False:
             sender_id = event['sender']['id']
             searchTarget = event['message']['text']
-            items, prices, urls, img_urls = search(event['message']['text'])
+            items, prices, urls, img_urls, describe = search(event['message']['text'])
             print('ffffffffffffffffffffff' + str(state2_flag))
             l = len(items)
             s = '共' + str(l) + '項商品'
@@ -124,6 +128,7 @@ class TocMachine(GraphMachine):
         global prices
         global items
         global urls
+        global describe
         global min_target
 
         print(prices)
@@ -134,6 +139,7 @@ class TocMachine(GraphMachine):
             send_message(sender_id, items[every])
             send_message(sender_id, prices[every])
             send_message(sender_id, urls[every])
+            send_message(sender_id, describe[every])
         self.go_back_to_state2('back state2')
 
     def on_exit_state3(self, event):

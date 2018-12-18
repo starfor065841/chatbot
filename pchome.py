@@ -50,7 +50,7 @@ def search(target):
             if result >= 0.7:
                 items.append(item['name'])
                 prices.append(item['price'])
-                print(item['describe'])
+                describe.append(item['describe'])
                 image_url = img + item['picS']
                 image_urls.append(image_url)
                 url = mainurl + item['Id'] + ' '
@@ -82,7 +82,7 @@ def search(target):
 
 
     print()
-    return items, prices, urls, image_urls
+    return items, prices, urls, image_urls, describe
 
 
 def firstPage(target):
