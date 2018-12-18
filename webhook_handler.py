@@ -7,8 +7,11 @@ import os
 from send_msg import send_message
 
 webhook_handler = Flask(__name__)
-ACCESS_TOKEN = 'EAAFHtRQRdEsBALpCb6If7X2tKwZAR4b10GtnDaye6XXII6LypemuznzgvxasD3fvSeZA6x0fJ0YDqMSSSgaCcH037hawprNUWlSKvtKv49SurV6vMweXvaoYE3Iyw1cOrktKmzFurSvZAxlux2MK1WNVIyqwruVNSWLCjA8bwZDZD'
-VERIFY_TOKEN = 'Rmp4951344'
+#ACCESS_TOKEN = 'EAAFHtRQRdEsBALpCb6If7X2tKwZAR4b10GtnDaye6XXII6LypemuznzgvxasD3fvSeZA6x0fJ0YDqMSSSgaCcH037hawprNUWlSKvtKv49SurV6vMweXvaoYE3Iyw1cOrktKmzFurSvZAxlux2MK1WNVIyqwruVNSWLCjA8bwZDZD'
+#VERIFY_TOKEN = 'Rmp4951344'
+
+ACCESS_TOKEN = os.environ['ACCESS_TOKEN']
+VERIFY_TOKEN = os.environ['VERIFY_TOKEN']
 
 
 
