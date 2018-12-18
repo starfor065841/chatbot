@@ -30,6 +30,7 @@ def search(target):
     prices = []
     urls = []
     image_urls = []
+    describe = []
     totalPage = jd['totalPage']
     currentPage = 1
     i = 0
@@ -49,11 +50,12 @@ def search(target):
             if result >= 0.7:
                 items.append(item['name'])
                 prices.append(item['price'])
+                print(item['describe'])
                 image_url = img + item['picS']
                 image_urls.append(image_url)
                 url = mainurl + item['Id'] + ' '
                 urls.append(url)
-                print(item['name'])
+                #Sprint(item['name'])
             #print(prices[i])
             #print(urls[i])
             #print(image_urls[i])
