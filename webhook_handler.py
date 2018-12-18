@@ -142,7 +142,7 @@ def receive_message():
     return "Message Processed"
 
 
-def verify_fb_token(token_sent, mode):
+def verify_fb_token(token_sent):
     #take token sent by facebook and verify it matches the verify token you sent
     #if they match, allow the request, else return an error 
     if token_sent == VERIFY_TOKEN:
