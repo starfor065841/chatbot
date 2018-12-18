@@ -5,9 +5,9 @@
 ![alt tag](https://github.com/starfor065841/chatbot/blob/master/fsm.png?raw=true)
 ## How to chat with bot
 ## user state
-為initial state，沒有特殊功能
-## state1
+為initial state  
 輸入  "開始使用"  
+## state1 
 回應  "請輸入商品名稱"  
 輸入商品後進入state2  
 ## state2
