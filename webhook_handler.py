@@ -71,7 +71,7 @@ machine = TocMachine(
             'trigger': 'advance',
             'source': 'state2',
             'dest': 'state1',
-            'conditions': 'back_to_state2'
+            'conditions': 'back_to_state1'
         },
         {
             'trigger': 'go_back',
