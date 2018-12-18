@@ -6,7 +6,8 @@
 ## How to chat with bot
 ## user state
 為initial state  
-輸入  "開始使用"  
+輸入  "開始使用" 
+進入state1   
 ## state1 
 回應  "請輸入商品名稱"  
 輸入商品後進入state2  
