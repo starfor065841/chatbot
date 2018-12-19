@@ -1,7 +1,8 @@
 # chatbot
 簡易pchome24h網路商場之爬蟲
 並具有簡易商品過慮及搜尋最便宜商品之功能  
-已經deploy到heroku
+採用flask為主要framework  
+並deploy到heroku
 ## FSM
 ![alt tag](https://github.com/starfor065841/chatbot/blob/master/fsm.png?raw=true)
 ## How to chat with bot
