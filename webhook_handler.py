@@ -69,7 +69,8 @@ machine = TocMachine(
             'source': [
                 'state3',
                 'state4',
-                'state5'
+                'state5',
+                'state6'
             ],
             'dest': 'state2',
             'conditions': 'back_to_state2'
