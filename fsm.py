@@ -62,6 +62,12 @@ class TocMachine(GraphMachine):
         if event['message'].get('text'):
             text = event['message']['text']
             return text == '列表'
+        return False
+
+    def is_going_to_state6(self, event):
+        if event['message'].get('text'):
+            text = event['message']['text']
+            return text == 'Demo'
         return False       
 
     def on_enter_state1(self, event):
@@ -179,6 +185,21 @@ class TocMachine(GraphMachine):
 
     def on_exit_state5(self, event):
         print('Leaving state5')
+
+    def on_enter_state6(self, event):
+        print("I'm entering state6")
+
+        global searchTarget
+        
+        sender_id = event['sender']['id']
+        url = firstPage(searchTarget)
+        send_message(sender_id, 'Demo')
+            
+        self.go_back_to_state2('back state2')
+
+
+    def on_exit_state6(self, event):
+        print('Leaving state6')
 
 
 '''
