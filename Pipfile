@@ -23,7 +23,7 @@ guacamole = "==0.9.2"
 pygraphviz = "==1.5"
 Flask = "==1.0.2"
 Pillow = "==3.1.2"
-Werkzeug = "==0.14.1"
+Werkzeug = "==0.15.3"
 
 [requires]
 python_version = "3.7"
