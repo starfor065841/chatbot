@@ -9,7 +9,7 @@ verify_ssl = true
 beautifulsoup4 = "==4.4.1"
 bottle = "==0.12.13"
 config = "==0.4.0"
-html5lib = "==0.999"
+html5lib = "==0.99999999"
 httplib2 = "==0.9.1"
 pycurl = "==7.43.0"
 pymessenger = "==0.0.7.0"
